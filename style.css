@@ -1,0 +1,1163 @@
+
+/* ==========================================
+   ANIMARK STUDIO - IDENTIDAD VISUAL
+   ========================================== */
+
+:root {
+    --bg: #080d19;
+    --bg-soft: #0d1424;
+    --surface: #111d32;
+    --surface-light: #172640;
+    --cyan: #19e6f2;
+    --cyan-soft: #79f5fa;
+    --orange: #ff7900;
+    --orange-light: #ff9a38;
+    --text: #f4f7ff;
+    --muted: #a6b4cc;
+    --border: rgba(139, 171, 218, 0.17);
+    --radius: 20px;
+    --shadow: 0 18px 50px rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 25px;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background:
+        radial-gradient(ellipse at 10% 12%, rgba(0, 184, 220, 0.09), transparent 32%),
+        radial-gradient(ellipse at 90% 40%, rgba(255, 121, 0, 0.055), transparent 30%),
+        var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+a {
+    color: inherit;
+}
+
+.container {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 42px;
+    flex-wrap: wrap;
+}
+
+
+/* ==========================================
+   ENCABEZADO CON LOGO Y MENSAJE
+   ========================================== */
+
+.header {
+    position: relative;
+    z-index: 2;
+    padding: 20px 0;
+    background:
+        radial-gradient(
+            ellipse at 20% 50%,
+            rgba(0, 190, 255, 0.12),
+            transparent 55%
+        ),
+        rgba(12, 19, 35, 0.98);
+    border-bottom: 1px solid rgba(25, 230, 242, 0.4);
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.22);
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 36%;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        var(--cyan),
+        rgba(25, 230, 242, 0)
+    );
+    box-shadow: 0 0 15px rgba(25, 230, 242, 0.45);
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 38px;
+}
+
+.logo-link {
+    flex: 0 0 290px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.logo-link:hover {
+    transform: translateY(-2px);
+    filter: drop-shadow(0 0 15px rgba(25, 230, 242, 0.3));
+}
+
+.logo {
+    display: block;
+    width: 100%;
+    max-width: 290px;
+    max-height: 135px;
+    object-fit: contain;
+    object-position: left center;
+    filter: drop-shadow(0 5px 16px rgba(0, 183, 255, 0.2));
+}
+
+.header-message {
+    flex: 1;
+    max-width: 720px;
+    padding-left: 30px;
+    border-left: 2px solid rgba(25, 230, 242, 0.65);
+}
+
+.header-eyebrow {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--cyan);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.header-message p {
+    color: #dce6f7;
+    font-size: clamp(1.05rem, 1.7vw, 1.4rem);
+    font-weight: 500;
+    line-height: 1.65;
+}
+
+.header-message strong {
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.header-question {
+    display: inline-block;
+    margin-left: 5px;
+    color: var(--orange-light);
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+/* ==========================================
+   SECCIONES
+   ========================================== */
+
+.section {
+    position: relative;
+    padding: 85px 0;
+}
+
+.video-intro {
+    padding-top: 88px;
+    padding-bottom: 95px;
+}
+
+.packages-section {
+    background: linear-gradient(
+        180deg,
+        rgba(15, 26, 45, 0.32),
+        rgba(15, 26, 45, 0.78),
+        rgba(15, 26, 45, 0.32)
+    );
+    border-top: 1px solid rgba(139, 171, 218, 0.07);
+    border-bottom: 1px solid rgba(139, 171, 218, 0.07);
+}
+
+.section-heading {
+    max-width: 760px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.section-eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--orange-light);
+    font-size: 0.77rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.section-title {
+    color: var(--text);
+    font-size: clamp(1.8rem, 4vw, 2.65rem);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    margin: 20px auto 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--cyan), var(--orange));
+}
+
+.section-description {
+    margin-top: 17px;
+    color: var(--muted);
+    font-size: 1rem;
+}
+
+/* ==========================================
+   MASCOTAS
+   Sin globos ni cuadros de texto
+   ========================================== */
+
+.mascot-box {
+    position: relative;
+    flex: 0 1 500px;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    isolation: isolate;
+}
+.mascot-box::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 90%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: rgba(25, 230, 242, 0.12);
+    filter: blur(50px);
+    pointer-events: none;
+}
+
+.mascot-img {
+    display: block;
+    width: 125%;
+    height: auto;
+    max-height: 700px;
+    object-fit: contain;
+    border-radius: 16px;
+    filter: drop-shadow(0 15px 28px rgba(0, 0, 0, 0.25));
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+.mascot-box:hover .mascot-img {
+    transform: translateY(-5px) scale(1.02);
+    filter: drop-shadow(0 20px 30px rgba(25, 230, 242, 0.15));
+}
+/* Imágenes de mascotas con fondo blanco:
+   se conserva el archivo original sin recortarlo. */
+
+.mascot-promo {
+    flex-basis: 220px;
+}
+
+/* ==========================================
+   VIDEOS
+   ========================================== */
+
+.video-container {
+    position: relative;
+    isolation: isolate;
+    flex: none;
+    min-width: 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border: 1px solid rgba(25, 230, 242, 0.25);
+    border-radius: 22px;
+    background: #000;
+    box-shadow:
+        0 0 0 1px rgba(25, 230, 242, 0.04),
+        0 20px 55px rgba(0, 0, 0, 0.38),
+        0 0 35px rgba(25, 230, 242, 0.07);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-player {
+    flex: 1 1 550px;
+    min-width: 0;
+}
+
+.video-player .video-container {
+    width: 100%;
+}
+
+.video-outro .video-player {
+    width: min(100%, 1080px);
+    margin: 0 auto;
+}
+
+.video-container video {
+    object-fit: contain;
+    background: #000;
+}
+
+.video-container audio {
+    display: none;
+}
+
+.player-controls {
+    position: absolute;
+    inset: auto 0 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 38px 16px 14px;
+    color: #fff;
+    background: linear-gradient(transparent, rgba(4, 9, 19, 0.94));
+    opacity: 0.82;
+    transition: opacity 0.2s ease;
+}
+
+.video-container:hover .player-controls,
+.video-container:focus-within .player-controls {
+    opacity: 1;
+}
+
+.player-controls button {
+    display: grid;
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 50%;
+    color: #07111b;
+    background: #19e6f2;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.player-controls button:hover {
+    transform: scale(1.08);
+    background: #83f7fa;
+}
+
+.player-controls button:focus-visible,
+.player-controls input:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+.player-controls .player-timeline {
+    flex: 1 1 auto;
+    min-width: 35px;
+}
+
+.player-controls .player-current-time,
+.player-controls .player-duration,
+.player-time-separator {
+    font-size: 0.78rem;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.player-time-separator {
+    color: rgba(255, 255, 255, 0.62);
+}
+
+.player-controls input[type="range"] {
+    height: 4px;
+    margin: 0;
+    border-radius: 999px;
+    background: linear-gradient(
+        to right,
+        #19e6f2 0,
+        #19e6f2 var(--range-progress, 0%),
+        rgba(255, 255, 255, 0.4) var(--range-progress, 0%),
+        rgba(255, 255, 255, 0.4) 100%
+    );
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.player-controls input[type="range"]::-webkit-slider-thumb {
+    width: 12px;
+    height: 12px;
+    border: 0;
+    border-radius: 50%;
+    background: #19e6f2;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.player-controls input[type="range"]::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border: 0;
+    border-radius: 50%;
+    background: #19e6f2;
+}
+
+.player-volume {
+    display: flex;
+    flex: 0 0 95px;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+}
+
+.player-volume input {
+    width: 68px;
+}
+
+.video-audio-status {
+    margin: 8px 0 0;
+    color: #ffb36b;
+}
+
+.video-container:hover {
+    border-color: rgba(25, 230, 242, 0.55);
+    box-shadow:
+        0 22px 60px rgba(0, 0, 0, 0.42),
+        0 0 30px rgba(25, 230, 242, 0.12);
+}
+
+.video-container iframe,
+.video-container video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 0;
+}
+
+/* ==========================================
+   PAQUETES
+   ========================================== */
+
+.packages-row {
+    align-items: center;
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    flex: 1 1 650px;
+    min-width: 0;
+}
+
+.package-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 23px;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: linear-gradient(
+        145deg,
+        rgba(25, 42, 69, 0.95),
+        rgba(15, 25, 43, 0.96)
+    );
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.package-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 15%;
+    right: 15%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(25, 230, 242, 0.48);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
+}
+
+.package-card:hover::before {
+    opacity: 1;
+}
+
+.package-icon {
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(25, 230, 242, 0.23);
+    border-radius: 16px;
+    background: rgba(25, 230, 242, 0.09);
+    color: var(--cyan);
+    font-size: 1.45rem;
+}
+
+.package-card h3 {
+    margin-bottom: 12px;
+    color: var(--text);
+    font-size: 1.12rem;
+    line-height: 1.4;
+}
+
+.package-card .price {
+    margin-bottom: 16px;
+    color: var(--orange-light);
+    font-size: clamp(1.45rem, 2.4vw, 1.8rem);
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.package-card .price span {
+    color: var(--muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.package-description {
+    color: var(--muted);
+    font-size: 0.94rem;
+    line-height: 1.7;
+}
+
+.package-card.highlight {
+    border-color: rgba(255, 121, 0, 0.7);
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(255, 121, 0, 0.13),
+            transparent 60%
+        ),
+        linear-gradient(145deg, #1c2940, #111a2b);
+    box-shadow:
+        0 12px 38px rgba(255, 121, 0, 0.08),
+        inset 0 0 25px rgba(255, 121, 0, 0.025);
+}
+
+.package-card.highlight::before {
+    background: linear-gradient(90deg, transparent, var(--orange), transparent);
+    opacity: 1;
+}
+
+.package-card.highlight .package-icon {
+    color: var(--orange-light);
+    border-color: rgba(255, 121, 0, 0.3);
+    background: rgba(255, 121, 0, 0.1);
+}
+
+.popular-label {
+    margin-bottom: 20px;
+    padding: 6px 12px;
+    border-radius: 50px;
+    background: rgba(255, 121, 0, 0.15);
+    color: var(--orange-light);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+/* ==========================================
+   MASCOTA Y CONTACTO
+   ========================================== */
+
+.register-section {
+    background:
+        radial-gradient(
+            ellipse at 50% 50%,
+            rgba(25, 230, 242, 0.055),
+            transparent 55%
+        );
+}
+
+.register-section .row {
+    justify-content: center;
+    gap: clamp(24px, 6vw, 72px);
+}
+
+.register-section .mascot-box {
+    flex: 0 1 390px;
+    width: 390px;
+    max-width: 100%;
+}
+
+.register-section .btn-whatsapp {
+    width: auto;
+    max-width: 100%;
+}
+
+/* ==========================================
+   BOTONES
+   ========================================== */
+
+.btn {
+    display: inline-flex;
+    flex: 1 1 200px;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 51px;
+    padding: 13px 19px;
+    border: 1px solid transparent;
+    border-radius: 11px;
+    font-size: 0.93rem;
+    font-weight: 750;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-whatsapp {
+    flex: 0 0 auto;
+    background: #158e51;
+    color: #fff;
+}
+
+.btn-whatsapp:hover {
+    background: #1aaa62;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.17);
+}
+
+.floating-whatsapp {
+    position: fixed;
+    right: max(24px, env(safe-area-inset-right));
+    bottom: max(24px, env(safe-area-inset-bottom));
+    z-index: 1000;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.floating-whatsapp > i {
+    display: grid;
+    width: 60px;
+    height: 60px;
+    flex: 0 0 60px;
+    place-items: center;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    background: #1aaa62;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.32);
+    font-size: 2rem;
+    transform-style: preserve-3d;
+    animation: whatsapp-globe-spin 4s linear infinite;
+    transition: background-color 0.2s ease, filter 0.2s ease;
+}
+
+.floating-whatsapp-label {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 12px);
+    padding: 9px 16px;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
+    color: #126b42;
+    font-size: 0.9rem;
+    font-weight: 750;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.floating-whatsapp-label::after {
+    position: absolute;
+    right: 22px;
+    bottom: -6px;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    content: "";
+    transform: rotate(45deg);
+}
+
+.floating-whatsapp:hover > i {
+    background: #128c50;
+    filter: brightness(1.12);
+}
+
+@keyframes whatsapp-globe-spin {
+    from {
+        transform: perspective(120px) rotateY(0deg);
+    }
+    to {
+        transform: perspective(120px) rotateY(360deg);
+    }
+}
+
+.floating-whatsapp:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 5px;
+}
+
+/* ==========================================
+   VIDEO FINAL Y PIE DE PÁGINA
+   ========================================== */
+
+.video-outro {
+    padding-top: 65px;
+    padding-bottom: 85px;
+    background: rgba(12, 20, 35, 0.6);
+    border-top: 1px solid var(--border);
+}
+
+.video-outro .section-heading {
+    margin-bottom: 35px;
+}
+
+.footer {
+    padding: 25px 0;
+    border-top: 1px solid var(--border);
+    background: #070b14;
+    text-align: center;
+}
+
+.footer p {
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+.footer-brand {
+    color: var(--text);
+    font-weight: 800;
+}
+
+.footer-separator {
+    margin: 0 8px;
+    color: var(--cyan);
+}
+
+/* ==========================================
+   ACCESIBILIDAD
+   ========================================== */
+
+:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+/* ==========================================
+   TABLETAS
+   ========================================== */
+
+@media (max-width: 900px) {
+    .section {
+        padding: 65px 0;
+    }
+
+    .video-intro .row {
+        gap: 28px;
+    }
+
+    .video-intro .mascot-box {
+        flex-basis: 200px;
+    }
+
+    .video-intro .video-player {
+        flex-basis: 400px;
+    }
+
+    .packages-row {
+        gap: 30px;
+    }
+
+    .packages-grid {
+        flex-basis: 100%;
+    }
+
+    .mascot-promo {
+        flex-basis: 190px;
+        margin: 0 auto;
+    }
+
+}
+
+/* ==========================================
+   CELULARES
+   ========================================== */
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0 18px;
+    }
+
+    .floating-whatsapp {
+        right: max(16px, env(safe-area-inset-right));
+        bottom: max(16px, env(safe-area-inset-bottom));
+    }
+
+    .floating-whatsapp > i {
+        width: 54px;
+        height: 54px;
+        flex-basis: 54px;
+        font-size: 1.8rem;
+    }
+
+    .floating-whatsapp-label {
+        padding: 8px 13px;
+        font-size: 0.84rem;
+    }
+
+    .header {
+        padding: 17px 0 20px;
+    }
+
+    .logo {
+        width: 190px;
+        max-height: 85px;
+    }
+
+    .brand-tagline {
+        font-size: 0.67rem;
+        letter-spacing: 1.5px;
+    }
+
+    .section {
+        padding: 52px 0;
+    }
+
+    .video-intro {
+        padding-top: 42px;
+        padding-bottom: 58px;
+    }
+
+    .video-intro .row {
+        flex-direction: column;
+        gap: 27px;
+    }
+
+    .video-intro .mascot-box {
+        flex: none;
+        width: min(210px, 72%);
+        margin: 0 auto;
+    }
+
+    .mascot-img {
+        max-height: 340px;
+    }
+
+    .video-container {
+        flex: none;
+        width: 100%;
+        min-width: 0;
+        border-radius: 15px;
+    }
+
+    .video-intro .video-player {
+        flex: none;
+        width: 100%;
+    }
+
+    .player-controls {
+        gap: 8px;
+        padding: 32px 10px 10px;
+    }
+
+    .player-controls button {
+        flex-basis: 34px;
+        width: 34px;
+        height: 34px;
+    }
+
+    .player-volume {
+        flex-basis: 75px;
+        gap: 6px;
+    }
+
+    .player-volume input {
+        width: 48px;
+    }
+
+    .player-controls .player-current-time,
+    .player-controls .player-duration,
+    .player-time-separator {
+        font-size: 0.7rem;
+    }
+
+    .section-heading {
+        margin-bottom: 32px;
+    }
+
+    .section-title {
+        font-size: 1.85rem;
+    }
+
+    .section-eyebrow {
+        font-size: 0.68rem;
+        letter-spacing: 2px;
+    }
+
+    .section-description {
+        font-size: 0.92rem;
+    }
+
+    .packages-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .package-card {
+        padding: 27px 23px;
+    }
+
+    .package-card .price {
+        font-size: 1.7rem;
+    }
+
+    .mascot-promo {
+        width: min(200px, 70%);
+    }
+
+    .btn {
+        width: 100%;
+        flex: none;
+        min-height: 49px;
+    }
+
+    .register-section .row {
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .register-section .btn-whatsapp {
+        width: auto;
+        max-width: 100%;
+    }
+
+    .video-outro {
+        padding-top: 50px;
+        padding-bottom: 55px;
+    }
+
+    .footer p {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* ==========================================
+   RESPONSIVE: ENCABEZADO Y MASCOTAS
+   ========================================== */
+
+/* TABLETAS */
+@media (max-width: 900px) {
+
+    .logo-container {
+        gap: 24px;
+    }
+
+    .logo-link {
+        flex-basis: 230px;
+    }
+
+    .logo {
+        max-width: 230px;
+        max-height: 115px;
+    }
+
+    .header-message {
+        padding-left: 20px;
+    }
+
+    .header-message p {
+        font-size: 1.05rem;
+    }
+
+    .video-intro .mascot-box {
+        flex-basis: 260px;
+    }
+
+    .mascot-promo {
+        flex-basis: 230px;
+    }
+}
+
+
+/* CELULARES */
+@media (max-width: 600px) {
+
+    .header {
+        padding: 22px 0;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .logo-link {
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    .logo {
+        width: 260px;
+        max-width: 100%;
+        max-height: 125px;
+    }
+
+    .header-message {
+        max-width: 100%;
+        padding-left: 16px;
+    }
+
+    .header-eyebrow {
+        font-size: 0.7rem;
+    }
+
+    .header-message p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+
+    .video-intro .mascot-box {
+        flex: none;
+        width: min(290px, 90%);
+    }
+
+    .mascot-promo {
+        flex: none;
+        width: min(260px, 85%);
+    }
+
+    .mascot-img {
+        max-height: 460px;
+    }
+
+}
+
+/* ==========================================
+   AJUSTE INDIVIDUAL DE LOS TRES MAPACHES
+   ========================================== */
+
+/* Mapache 1: presentación */
+.video-intro .mascot-box {
+    flex: 0 0 380px;
+    width: 380px;
+    max-width: 100%;
+}
+
+/* Mapache 2: promociones */
+.packages-section .mascot-box {
+    flex: 0 0 370px;
+    width: 370px;
+    max-width: 125%;
+}
+
+/* Mapache 3: mascota y contacto */
+.register-section .mascot-box {
+    flex: 0 1 390px;
+    width: 390px;
+    max-width: 100%;
+}
+
+/* Imagen de los tres mapaches */
+.mascot-box .mascot-img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    max-height: none;
+    height: auto;
+    object-fit: contain;
+}
+
+/* ==========================================
+   AJUSTES PARA TABLETAS
+   ========================================== */
+@media (max-width: 900px) {
+    .video-intro .mascot-box {
+        flex-basis: 300px;
+        width: 300px;
+    }
+
+    .packages-section .mascot-box {
+        flex-basis: 270px;
+        width: 270px;
+    }
+
+    .register-section .mascot-box {
+        flex-basis: 340px;
+        width: 340px;
+    }
+}
+
+/* ==========================================
+   AJUSTES PARA CELULARES
+   ========================================== */
+@media (max-width: 600px) {
+    .video-intro .mascot-box {
+        flex: 0 1 290px;
+        width: 290px;
+        max-width: 90%;
+    }
+
+    .packages-section .mascot-box {
+        flex: 0 1 270px;
+        width: 270px;
+        max-width: 90%;
+    }
+
+    .register-section .mascot-box {
+        flex: 0 1 290px;
+        width: 290px;
+        max-width: 90%;
+    }
+}

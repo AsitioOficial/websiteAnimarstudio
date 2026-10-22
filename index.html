@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080D19" />
+
+    <title>Animark Studio | Videos Publicitarios</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ENCABEZADO ANIMARK STUDIO -->
+    <header class="header">
+      <div class="container logo-container">
+        <a href="#" class="logo-link" aria-label="Animark Studio, inicio">
+          <img src="logoa.jpg" alt="Animark Studio" class="logo" />
+        </a>
+
+        <div class="header-message">
+          <span class="header-eyebrow">ANIMARK STUDIO</span>
+
+          <p>
+            En Animark Studio transformamos la imagen de tu negocio en una
+            <strong>máquina de atraer clientes.</strong>
+            <span class="header-question">¿Empezamos?</span>
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECCIÓN 1: VIDEO DE PRESENTACIÓN -->
+    <section class="section video-intro">
+      <div class="container row">
+        <div class="mascot-box">
+          <img
+            src="mapa1.png"
+            alt="Mascota de Animark Studio"
+            class="mascot-img"
+          />
+        </div>
+
+        <div class="video-player">
+          <div class="video-container" data-player="presentation">
+            <video
+              id="presentationVideo"
+              playsinline
+              preload="metadata"
+              muted
+              aria-label="Video de presentación de Animark Studio"
+            >
+              <source src="video-final.mp4" type="video/mp4" />
+              Tu navegador no puede reproducir este video.
+            </video>
+            <audio id="presentationAudio" preload="metadata" aria-hidden="true">
+              <source src="audio-final.mp3" type="audio/mpeg" />
+            </audio>
+            <div
+              class="player-controls"
+              role="group"
+              aria-label="Controles del video de presentación"
+            >
+              <button
+                class="player-play"
+                type="button"
+                aria-label="Reproducir video"
+              >
+                <i class="fas fa-play" aria-hidden="true"></i>
+              </button>
+              <input
+                class="player-timeline"
+                type="range"
+                min="0"
+                max="1000"
+                value="0"
+                aria-label="Buscar en el video de presentación"
+              />
+              <span class="player-current-time">0:00</span>
+              <span class="player-time-separator" aria-hidden="true">/</span>
+              <span class="player-duration">0:00</span>
+              <label class="player-volume">
+                <i class="fas fa-volume-high" aria-hidden="true"></i>
+                <input
+                  type="range"
+                  min="0"
+                  max="1"
+                  step="0.05"
+                  value="1"
+                  aria-label="Volumen del video de presentación"
+                />
+              </label>
+            </div>
+          </div>
+          <p
+            id="videoAudioStatus"
+            class="video-audio-status"
+            aria-live="polite"
+            hidden
+          ></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: PAQUETES Y PROMOCIONES -->
+    <section class="section packages-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-eyebrow">HAZ CRECER TU MARCA</span>
+          <h2 class="section-title">Nuestros Paquetes y Promociones</h2>
+          <p class="section-description">
+            Soluciones creativas para llevar tu negocio al siguiente nivel.
+          </p>
+        </div>
+
+        <div class="row packages-row">
+          <div class="packages-grid">
+            <div class="package-card">
+              <div class="package-icon">
+                <i class="fas fa-play-circle"></i>
+              </div>
+              <h3>Paquete Básico "1 video"</h3>
+              <p class="price">$120 <span>MXN</span></p>
+              <p class="package-description">
+                Ideal para pequeños negocios que inician en redes.
+              </p>
+            </div>
+
+            <div class="package-card">
+              <div class="package-icon">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <h3>Paquete Emprendedor "2 videos"</h3>
+              <p class="price">$180 <span>MXN</span></p>
+              <p class="package-description">
+                Video publicitario animado + guión personalizado.
+              </p>
+            </div>
+
+            <div class="package-card">
+              <div class="package-icon">
+                <i class="fas fa-film"></i>
+              </div>
+              <h3>Paquete Pro "4 Videos"</h3>
+              <p class="price">$300 <span>MXN</span></p>
+              <p class="package-description">
+                Edición avanzada, voz en off profesional y animaciones 3D.
+              </p>
+            </div>
+
+            <div class="package-card highlight">
+              <span class="popular-label">PAQUETE DESTACADO</span>
+              <div class="package-icon">
+                <i class="fas fa-crown"></i>
+              </div>
+              <h3>Paquete Premium "8 Videos"</h3>
+              <p class="price">$500 <span>MXN</span></p>
+              <p class="package-description">
+                Creación de guion, personaje y animación
+                edición profesional y cada video diferente.
+              </p>
+            </div>
+          </div>
+
+          <div class="mascot-box mascot-promo">
+            <img
+              src="mapa2.png"
+              alt="Mascota de Animark Studio presentando promociones"
+              class="mascot-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: MASCOTA Y CONTACTO -->
+    <section class="section register-section">
+      <div class="container row">
+        <div class="mascot-box">
+          <img
+            src="mapp3.png"
+            alt="Mascota de Animark Studio"
+            class="mascot-img"
+          />
+        </div>
+
+        <a
+          href="https://wa.me/525642630137?text=Hola,%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-whatsapp"
+        >
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          Contactar por WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: VIDEO FINAL -->
+    <section class="section video-outro">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-eyebrow">EL SIGUIENTE PASO ES TUYO</span>
+          <h2 class="section-title">Hagamos realidad tu próxima idea</h2>
+        </div>
+
+        <div class="video-player">
+          <div class="video-container" data-player="final">
+            <video
+              id="finalVideo"
+              playsinline
+              preload="metadata"
+              muted
+              aria-label="Video promocional de Animark Studio"
+            >
+              <source src="video-presentacion.mp4" type="video/mp4" />
+              Tu navegador no puede reproducir este video.
+            </video>
+            <audio id="finalAudio" preload="metadata" aria-hidden="true">
+              <source src="audio-presentacion.mp3" type="audio/mpeg" />
+            </audio>
+            <div
+              class="player-controls"
+              role="group"
+              aria-label="Controles del video promocional"
+            >
+              <button
+                class="player-play"
+                type="button"
+                aria-label="Reproducir video"
+              >
+                <i class="fas fa-play" aria-hidden="true"></i>
+              </button>
+              <input
+                class="player-timeline"
+                type="range"
+                min="0"
+                max="1000"
+                value="0"
+                aria-label="Buscar en el video promocional"
+              />
+              <span class="player-current-time">0:00</span>
+              <span class="player-time-separator" aria-hidden="true">/</span>
+              <span class="player-duration">0:00</span>
+              <label class="player-volume">
+                <i class="fas fa-volume-high" aria-hidden="true"></i>
+                <input
+                  type="range"
+                  min="0"
+                  max="1"
+                  step="0.05"
+                  value="1"
+                  aria-label="Volumen del video promocional"
+                />
+              </label>
+            </div>
+          </div>
+          <p
+            id="finalAudioStatus"
+            class="video-audio-status"
+            aria-live="polite"
+            hidden
+          ></p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          <span class="footer-brand">Animark Studio</span>
+          <span class="footer-separator">|</span>
+          Creatividad que impulsa tu negocio.
+        </p>
+      </div>
+    </footer>
+
+    <a
+      class="floating-whatsapp"
+      href="https://wa.me/525642630137?text=Hola,%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Contáctanos por WhatsApp"
+    >
+      <span class="floating-whatsapp-label">Contáctanos</span>
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <script src="script.js"></script>
+  </body>
+</html>
